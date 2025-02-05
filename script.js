@@ -41,205 +41,181 @@ function gerarPDF() {
 //DADOS
 const valoresProcedimentos = {
     Omint: {
-        CS1: {
-            Consulta: 75,
-            Exames_Especiais: 170,
-            Exames_Simples: 70,
-            Internação: 500,
-            Pronto_Socorro: 140,
-            Terapia: 70
-        },
-        C16: {
-            Consulta: 150,
+        Skil_20_por_cento: {
+            Consulta: 24.88,
             Exames_Especiais: 200,
-            Exames_Simples: 80,
-            Internação: 570,
-            Pronto_Socorro: 320,
-            Terapia: 90
+            Exames_Simples: 2.70,
+            Internação: 0,
+            Pronto_Socorro: 35.91,
+            Terapia: 23.08
         },
-        C19: {
-            Consulta: 170,
-            Exames_Especiais: 350,
-            Exames_Simples: 90,
-            Internação: 700,
-            Pronto_Socorro: 350,
-            Terapia: 150
+        Skil_30_por_cento: {
+            Consulta: 37.28,
+            Exames_Especiais: 200,
+            Exames_Simples: 4.06,
+            Internação: 0,
+            Pronto_Socorro: 53.87,
+            Terapia: 34.62
+        },
+        Corporate_20_por_cento: {
+            Consulta: 26.95,
+            Exames_Especiais: 200,
+            Exames_Simples: 4.98,
+            Internação: 0,
+            Pronto_Socorro: 48.80,
+            Terapia: 31.26
+        },
+        Corporate_30_por_cento: {
+            Consulta: 40.43,
+            Exames_Especiais: 200,
+            Exames_Simples: 7.47,
+            Internação: 0,
+            Pronto_Socorro: 73.20,
+            Terapia: 46.89
+        },
+        Premium_20_por_cento: {
+            Consulta: 49.10,
+            Exames_Especiais: 200,
+            Exames_Simples: 9.59,
+            Internação: 0,
+            Pronto_Socorro: 54.24,
+            Terapia: 87.48
+        },
+        Premium_30_por_cento: {
+            Consulta: 73.66,
+            Exames_Especiais: 200,
+            Exames_Simples: 14.39,
+            Internação: 0,
+            Pronto_Socorro: 81.36,
+            Terapia: 58.32
         }
     },
     Amil: {
-        Amil_Fácil_110: {
-            Consulta: 25,
-            Exames_Especiais: 100,
-            Exames_Simples: 20,
-            Internação: 180,
-            Pronto_Socorro: 50,
-            Terapia: 50
-        },
-        Amil_Fácil_S60_e_S80: {
-            Consulta: 25,
-            Exames_Especiais: 100,
-            Exames_Simples: 20,
-            Internação: 180,
-            Pronto_Socorro: 50,
-            Terapia: 50
-        },
-        Amil_One_S2500: {
-            Consulta: 70,
-            Exames_Especiais: 150,
-            Exames_Simples: 45,
-            Internação: 450,
-            Pronto_Socorro: 140,
-            Terapia: 90
-        },
-        Amil_One_S6500_R1: {
-            Consulta: 70,
-            Exames_Especiais: 150,
-            Exames_Simples: 45,
-            Internação: 450,
-            Pronto_Socorro: 140,
-            Terapia: 100
-        },
-        Amil_S380: {
+        Bronze_e_Bronze_Mais: {
             Consulta: 30,
-            Exames_Especiais: 110,
-            Exames_Simples: 25,
-            Internação: 200,
-            Pronto_Socorro: 60,
+            Exames_Especiais: 100,
+            Exames_Simples: 20,
+            Internação: 180,
+            Pronto_Socorro: 80,
             Terapia: 60
         },
-        Amil_S450_e_S580: {
+        Prata_e_Ouro: {
             Consulta: 30,
             Exames_Especiais: 110,
             Exames_Simples: 25,
             Internação: 220,
-            Pronto_Socorro: 60,
+            Pronto_Socorro: 90,
             Terapia: 60
         },
-        Amil_S750: {
-            Consulta: 35,
+        Platinum_e_Platinum_Mais: {
+            Consulta: 55,
             Exames_Especiais: 130,
             Exames_Simples: 35,
-            Internação: 370,
-            Pronto_Socorro: 70,
+            Internação: 400,
+            Pronto_Socorro: 130,
             Terapia: 70
+        },
+        Black: {
+            Consulta: 90,
+            Exames_Especiais: 150,
+            Exames_Simples: 45,
+            Internação: 550,
+            Pronto_Socorro: 200,
+            Terapia: 90
+        },
+        S80: {
+            Consulta: 25,
+            Exames_Especiais: 100,
+            Exames_Simples: 20,
+            Internação: 180,
+            Pronto_Socorro: 50,
+            Terapia: 50
+        },
+        S380: {
+            Consulta: 30,
+            Exames_Especiais: 110,
+            Exames_Simples: 25,
+            Internação: 220,
+            Pronto_Socorro: 80,
+            Terapia: 60
+        },
+        S450: {
+            Consulta: 30,
+            Exames_Especiais: 110,
+            Exames_Simples: 25,
+            Internação: 220,
+            Pronto_Socorro: 90,
+            Terapia: 60
+        },
+        S750: {
+            Consulta: 55,
+            Exames_Especiais: 130,
+            Exames_Simples: 35,
+            Internação: 400,
+            Pronto_Socorro: 130,
+            Terapia: 70
+        },
+        S2500: {
+            Consulta: 90,
+            Exames_Especiais: 150,
+            Exames_Simples: 45,
+            Internação: 550,
+            Pronto_Socorro: 200,
+            Terapia: 90
         }
     },
     Bradesco: {
-        FCEX_E_e_FCQX_A_: {
-            Consulta: 30,
-            Exames_Especiais: 120,
-            Exames_Simples: 45,
-            Internação: 210,
-            Pronto_Socorro: 90,
-            Terapia: 30
-        },
-        TNI1_E_e_TNI2_A_: {
+        Saude_Plus: {
             Consulta: 35,
-            Exames_Especiais: 140,
-            Exames_Simples: 52.50,
-            Internação: 245,
-            Pronto_Socorro: 105,
-            Terapia: 35
-        },
-        TNME_E_e_TNMQ_A_: {
-            Consulta: 30,
             Exames_Especiais: 120,
             Exames_Simples: 45,
-            Internação: 210,
+            Internação: 250,
             Pronto_Socorro: 90,
-            Terapia: 30
+            Terapia: 0
         },
-        TNNI_E_TNMI_A_TNMM_A_e_TNMN_A_: {
+        Efetivo: {
+            Consulta: 35,
+            Exames_Especiais: 120,
+            Exames_Simples: 45,
+            Internação: 250,
+            Pronto_Socorro: 90,
+            Terapia: 0
+        },
+        Nacional_Flex: {
             Consulta: 40,
+            Exames_Especiais: 135,
+            Exames_Simples: 55,
+            Internação: 300,
+            Pronto_Socorro: 115,
+            Terapia: 0
+        },
+        Ideal: {
+            Consulta: 45,
             Exames_Especiais: 160,
             Exames_Simples: 60,
-            Internação: 280,
+            Internação: 300,
             Pronto_Socorro: 120,
-            Terapia: 40
+            Terapia: 0
         },
-        TNP4_A_TNP6_A_e_TNP8_A_: {
+        Nacional: {
+            Consulta: 70,
+            Exames_Especiais: 160,
+            Exames_Simples: 65,
+            Internação: 500,
+            Pronto_Socorro: 130,
+            Terapia: 0
+        },
+        Nacional_Plus: {
             Consulta: 160,
             Exames_Especiais: 320,
             Exames_Simples: 160,
-            Internação: 480,
+            Internação: 550,
             Pronto_Socorro: 320,
-            Terapia: 160
-        },
-        TNWE_E_e_TNWQ_A_: {
-            Consulta: 30,
-            Exames_Especiais: 120,
-            Exames_Simples: 45,
-            Internação: 210,
-            Pronto_Socorro: 90,
-            Terapia: 30
+            Terapia: 0
         }
     },
     Porto_Seguro: {
-        LINHA_PRO_Bronze_Pro_10_por_cento: {
-            Consulta: 11,
-            Exames_Especiais: 34,
-            Exames_Simples: 20,
-            Internação: 125,
-            Pronto_Socorro: 34,
-            Terapia: 27
-        },
-        LINHA_PRO_Bronze_Pro_20_por_cento: {
-            Consulta: 22,
-            Exames_Especiais: 68,
-            Exames_Simples: 20,
-            Internação: 167,
-            Pronto_Socorro: 67,
-            Terapia: 27
-        },
-        LINHA_PRO_Bronze_Pro_30_por_cento: {
-            Consulta: 32,
-            Exames_Especiais: 102,
-            Exames_Simples: 30,
-            Internação: 250,
-            Pronto_Socorro: 100,
-            Terapia: 40
-        },
-        LINHA_PRO_Diamente_Pro_10_por_cento: {
-            Consulta: 24,
-            Exames_Especiais: 64,
-            Exames_Simples: 49,
-            Internação: 200,
-            Pronto_Socorro: 51,
-            Terapia: 51
-        },
-        LINHA_PRO_Diamente_Pro_20_por_cento: {
-            Consulta: 48,
-            Exames_Especiais: 128,
-            Exames_Simples: 49,
-            Internação: 267,
-            Pronto_Socorro: 102,
-            Terapia: 51
-        },
-        LINHA_PRO_Ouro_Pro_10_por_cento: {
-            Consulta: 15,
-            Exames_Especiais: 45,
-            Exames_Simples: 30,
-            Internação: 200,
-            Pronto_Socorro: 42,
-            Terapia: 40
-        },
-        LINHA_PRO_Ouro_Pro_20_por_cento: {
-            Consulta: 29,
-            Exames_Especiais: 91,
-            Exames_Simples: 30,
-            Internação: 267,
-            Pronto_Socorro: 83,
-            Terapia: 40
-        },
-        LINHA_PRO_Ouro_Pro_30_por_cento: {
-            Consulta: 44,
-            Exames_Especiais: 136,
-            Exames_Simples: 44,
-            Internação: 400,
-            Pronto_Socorro: 125,
-            Terapia: 60
-        },
-        LINHA_PRO_Prata_Pro_10_por_cento: {
+        Prata_Pro_10_por_cento: {
             Consulta: 12,
             Exames_Especiais: 36,
             Exames_Simples: 22,
@@ -247,39 +223,7 @@ const valoresProcedimentos = {
             Pronto_Socorro: 36,
             Terapia: 32
         },
-        LINHA_PRO_Prata_Pro_20_por_cento: {
-            Consulta: 23,
-            Exames_Especiais: 71,
-            Exames_Simples: 22,
-            Internação: 200,
-            Pronto_Socorro: 72,
-            Terapia: 32
-        },
-        LINHA_PRO_Prata_Pro_30_por_cento: {
-            Consulta: 34,
-            Exames_Especiais: 106,
-            Exames_Simples: 32,
-            Internação: 300,
-            Pronto_Socorro: 109,
-            Terapia: 48
-        },
-        LINHA_TRADICIONAL_Bronze_20_por_cento: {
-            Consulta: 22,
-            Exames_Especiais: 67,
-            Exames_Simples: 20,
-            Internação: 167,
-            Pronto_Socorro: 68,
-            Terapia: 27
-        },
-        LINHA_TRADICIONAL_Bronze_30_por_cento: {
-            Consulta: 32,
-            Exames_Especiais: 100,
-            Exames_Simples: 30,
-            Internação: 250,
-            Pronto_Socorro: 102,
-            Terapia: 40
-        },
-        LINHA_TRADICIONAL_Prata_20_por_cento: {
+        Prata_Pro_20_por_cento: {
             Consulta: 23,
             Exames_Especiais: 72,
             Exames_Simples: 22,
@@ -287,7 +231,7 @@ const valoresProcedimentos = {
             Pronto_Socorro: 71,
             Terapia: 32
         },
-        LINHA_TRADICIONAL_Prata_30_por_cento: {
+        Prata_Pro_30_por_cento: {
             Consulta: 34,
             Exames_Especiais: 109,
             Exames_Simples: 32,
@@ -295,15 +239,23 @@ const valoresProcedimentos = {
             Pronto_Socorro: 106,
             Terapia: 48
         },
-        LINHA_TRADICIONAL_Ouro_Mais_20_por_cento: {
+        Ouro_Pro_10_por_cento: {
+            Consulta: 15,
+            Exames_Especiais: 42,
+            Exames_Simples: 30,
+            Internação: 200,
+            Pronto_Socorro: 45,
+            Terapia: 40
+        },
+        Ouro_Pro_20_por_cento: {
             Consulta: 29,
-            Exames_Especiais: 83,
+            Exames_Especiais: 42,
             Exames_Simples: 30,
             Internação: 267,
             Pronto_Socorro: 91,
             Terapia: 40
         },
-        LINHA_TRADICIONAL_Ouro_Mais_30_por_cento: {
+        Ouro_Pro_30_por_cento: {
             Consulta: 44,
             Exames_Especiais: 125,
             Exames_Simples: 44,
@@ -311,7 +263,15 @@ const valoresProcedimentos = {
             Pronto_Socorro: 136,
             Terapia: 60
         },
-        LINHA_TRADICIONAL_Ouro_Max_20_por_cento: {
+        Diamante_Pro_10_por_cento: {
+            Consulta: 24,
+            Exames_Especiais: 51,
+            Exames_Simples: 49,
+            Internação: 200,
+            Pronto_Socorro: 64,
+            Terapia: 200
+        },
+        Diamante_Pro_20_por_cento: {
             Consulta: 48,
             Exames_Especiais: 102,
             Exames_Simples: 49,
@@ -319,7 +279,7 @@ const valoresProcedimentos = {
             Pronto_Socorro: 128,
             Terapia: 51
         },
-        LINHA_TRADICIONAL_Ouro_Max_30_por_cento: {
+        Diamante_Pro_30_por_cento: {
             Consulta: 73,
             Exames_Especiais: 153,
             Exames_Simples: 73,
@@ -327,118 +287,166 @@ const valoresProcedimentos = {
             Pronto_Socorro: 192,
             Terapia: 76
         },
-        LINHA_TRADICIONAL_Diamante_R1_20_por_cento: {
-            Consulta: 74,
-            Exames_Especiais: 151,
-            Exames_Simples: 66,
+        Bronze_20_por_cento: {
+            Consulta: 29,
+            Exames_Especiais: 113,
+            Exames_Simples: 50,
+            Internação: 220,
+            Pronto_Socorro: 90,
+            Terapia: 44
+        },
+        Bronze_30_por_cento: {
+            Consulta: 40,
+            Exames_Especiais: 150,
+            Exames_Simples: 60,
+            Internação: 320,
+            Pronto_Socorro: 125,
+            Terapia: 60
+        },
+        Prata_20_por_cento: {
+            Consulta: 30,
+            Exames_Especiais: 117,
+            Exames_Simples: 50,
+            Internação: 237,
+            Pronto_Socorro: 91,
+            Terapia: 47
+        },
+        Prata_30_por_cento: {
+            Consulta: 40,
+            Exames_Especiais: 150,
+            Exames_Simples: 60,
+            Internação: 320,
+            Pronto_Socorro: 125,
+            Terapia: 60
+        },
+        Ouro_Mais_20_por_cento: {
+            Consulta: 60,
+            Exames_Especiais: 128,
+            Exames_Simples: 56,
             Internação: 367,
-            Pronto_Socorro: 220,
-            Terapia: 80
+            Pronto_Socorro: 95,
+            Terapia: 50
         },
-        LINHA_TRADICIONAL_Diamante_R1_30_por_cento: {
-            Consulta: 111,
-            Exames_Especiais: 227,
-            Exames_Simples: 98,
-            Internação: 550,
-            Pronto_Socorro: 330,
-            Terapia: 120
+        Ouro_Mais_30_por_cento: {
+            Consulta: 75,
+            Exames_Especiais: 170,
+            Exames_Simples: 70,
+            Internação: 500,
+            Pronto_Socorro: 140,
+            Terapia: 70
         },
-        LINHA_TRADICIONAL_Diamante_R2_20_por_cento: {
-            Consulta: 135,
-            Exames_Especiais: 242,
-            Exames_Simples: 111,
-            Internação: 400,
-            Pronto_Socorro: 160,
-            Terapia: 94
+        Ouro_Max_20_por_cento: {
+            Consulta: 125,
+            Exames_Especiais: 149,
+            Exames_Simples: 56,
+            Internação: 437,
+            Pronto_Socorro: 256,
+            Terapia: 65
         },
-        LINHA_TRADICIONAL_Diamante_R2_30_por_cento: {
-            Consulta: 202,
-            Exames_Especiais: 363,
-            Exames_Simples: 166,
-            Internação: 600,
+        Ouro_Max_30_por_cento: {
+            Consulta: 150,
+            Exames_Especiais: 200,
+            Exames_Simples: 80,
+            Internação: 570,
+            Pronto_Socorro: 320,
+            Terapia: 90
+        },
+        Diamante_Mais_R1_20_por_cento: {
+            Consulta: 133,
+            Exames_Especiais: 274,
+            Exames_Simples: 48,
+            Internação: 517,
             Pronto_Socorro: 240,
-            Terapia: 140
+            Terapia: 110
         },
-        LINHA_PORTO_SAUDE_P200_20_por_cento: {
-            Consulta: 22,
-            Exames_Especiais: 67,
-            Exames_Simples: 20,
-            Internação: 167,
-            Pronto_Socorro: 68,
-            Terapia: 27
+        Diamante_Mais_R1_30_por_cento: {
+            Consulta: 170,
+            Exames_Especiais: 350,
+            Exames_Simples: 80,
+            Internação: 700,
+            Pronto_Socorro: 350,
+            Terapia: 150
         },
-        LINHA_PORTO_SAUDE_P200_30_por_cento: {
-            Consulta: 32,
-            Exames_Especiais: 100,
-            Exames_Simples: 30,
-            Internação: 250,
-            Pronto_Socorro: 102,
-            Terapia: 40
-        },
-        LINHA_PORTO_SAUDE_P300_20_por_cento: {
-            Consulta: 23,
-            Exames_Especiais: 72,
-            Exames_Simples: 22,
-            Internação: 200,
-            Pronto_Socorro: 71,
-            Terapia: 32
-        },
-        LINHA_PORTO_SAUDE_P300_30_por_cento: {
-            Consulta: 34,
-            Exames_Especiais: 109,
-            Exames_Simples: 32,
-            Internação: 300,
-            Pronto_Socorro: 106,
-            Terapia: 48
-        },
-        LINHA_PORTO_SAUDE_P400_20_por_cento: {
+        P210_20_por_cento: {
             Consulta: 29,
-            Exames_Especiais: 83,
-            Exames_Simples: 30,
-            Internação: 267,
-            Pronto_Socorro: 91,
-            Terapia: 40
+            Exames_Especiais: 113,
+            Exames_Simples: 50,
+            Internação: 220,
+            Pronto_Socorro: 90,
+            Terapia: 44
         },
-        LINHA_PORTO_SAUDE_P400_30_por_cento: {
-            Consulta: 44,
-            Exames_Especiais: 125,
-            Exames_Simples: 44,
-            Internação: 400,
-            Pronto_Socorro: 136,
+        P210_30_por_cento: {
+            Consulta: 40,
+            Exames_Especiais: 150,
+            Exames_Simples: 60,
+            Internação: 320,
+            Pronto_Socorro: 125,
             Terapia: 60
         },
-        LINHA_PORTO_SAUDE_P450_20_por_cento: {
-            Consulta: 48,
-            Exames_Especiais: 102,
-            Exames_Simples: 49,
-            Internação: 267,
-            Pronto_Socorro: 128,
-            Terapia: 51
+        P310_20_por_cento: {
+            Consulta: 30,
+            Exames_Especiais: 117,
+            Exames_Simples: 50,
+            Internação: 237,
+            Pronto_Socorro: 91,
+            Terapia: 47
         },
-        LINHA_PORTO_SAUDE_P450_30_por_cento: {
-            Consulta: 73,
-            Exames_Especiais: 153,
-            Exames_Simples: 73,
-            Internação: 400,
-            Pronto_Socorro: 192,
-            Terapia: 76
+        P310_30_por_cento: {
+            Consulta: 40,
+            Exames_Especiais: 150,
+            Exames_Simples: 60,
+            Internação: 320,
+            Pronto_Socorro: 125,
+            Terapia: 60
         },
-        LINHA_PORTO_SAUDE_P500_20_por_cento: {
-            Consulta: 74,
-            Exames_Especiais: 151,
-            Exames_Simples: 66,
+        P410_20_por_cento: {
+            Consulta: 60,
+            Exames_Especiais: 128,
+            Exames_Simples: 56,
             Internação: 367,
-            Pronto_Socorro: 220,
-            Terapia: 80
+            Pronto_Socorro: 95,
+            Terapia: 50
         },
-        LINHA_PORTO_SAUDE_P500_30_por_cento: {
-            Consulta: 111,
-            Exames_Especiais: 227,
-            Exames_Simples: 98,
-            Internação: 550,
-            Pronto_Socorro: 330,
-            Terapia: 120
+        P410_30_por_cento: {
+            Consulta: 75,
+            Exames_Especiais: 170,
+            Exames_Simples: 70,
+            Internação: 500,
+            Pronto_Socorro: 140,
+            Terapia: 70
         },
+        P460_20_por_cento: {
+            Consulta: 125,
+            Exames_Especiais: 149,
+            Exames_Simples: 56,
+            Internação: 437,
+            Pronto_Socorro: 256,
+            Terapia: 65
+        },
+        P460_30_por_cento: {
+            Consulta: 150,
+            Exames_Especiais: 200,
+            Exames_Simples: 80,
+            Internação: 570,
+            Pronto_Socorro: 320,
+            Terapia: 110
+        },
+        P510_20_por_cento: {
+            Consulta: 133,
+            Exames_Especiais: 274,
+            Exames_Simples: 48,
+            Internação: 517,
+            Pronto_Socorro: 133,
+            Terapia: 110
+        },
+        P510_30_por_cento: {
+            Consulta: 170,
+            Exames_Especiais: 350,
+            Exames_Simples: 80,
+            Internação: 700,
+            Pronto_Socorro: 350,
+            Terapia: 150
+        }
     },
     Seguros_Unimed: {
         COMPACTO: {
@@ -492,81 +500,74 @@ const valoresProcedimentos = {
     },
     Sulamerica: {
         Clássico: {
-            Consulta: 40,
-            Exames_Especiais: 150,
-            Exames_Simples: 60,
-            Internação: 320,
-            Pronto_Socorro: 125,
-            Terapia: 60
+            Consulta: 41.30,
+            Exames_Especiais: 154.89,
+            Exames_Simples: 61.96,
+            Internação: 0,
+            Pronto_Socorro: 129.08,
+            Terapia: 61.96
         },
         Direto: {
-            Consulta: 40,
-            Exames_Especiais: 150,
-            Exames_Simples: 60,
-            Internação: 320,
-            Pronto_Socorro: 125,
-            Terapia: 60
+            Consulta: 30.98,
+            Exames_Especiais: 123.91,
+            Exames_Simples: 51.53,
+            Internação: 0,
+            Pronto_Socorro: 92.93,
+            Terapia: 51.63
         },
         Especial: {
-            Consulta: 75,
-            Exames_Especiais: 170,
-            Exames_Simples: 70,
-            Internação: 500,
-            Pronto_Socorro: 140,
-            Terapia: 70
-        },
-        Exato: {
-            Consulta: 40,
-            Exames_Especiais: 150,
-            Exames_Simples: 60,
-            Internação: 320,
-            Pronto_Socorro: 125,
-            Terapia: 60
+            Consulta: 77.45,
+            Exames_Especiais: 175.54,
+            Exames_Simples: 72.28,
+            Internação: 0,
+            Pronto_Socorro: 144.56,
+            Terapia: 72.28
         },
         Executivo: {
-            Consulta: 150,
-            Exames_Especiais: 200,
-            Exames_Simples: 80,
-            Internação: 570,
-            Pronto_Socorro: 320,
-            Terapia: 90
+            Consulta: 154.89,
+            Exames_Especiais: 206.52,
+            Exames_Simples: 82.61,
+            Internação: 0,
+            Pronto_Socorro: 330.43,
+            Terapia: 92.93
         },
         Prestigie: {
-            Consulta: 170,
-            Exames_Especiais: 350,
-            Exames_Simples: 90,
-            Internação: 700,
-            Pronto_Socorro: 350,
-            Terapia: 150
+            Consulta: 175.54,
+            Exames_Especiais: 361.41,
+            Exames_Simples: 92.93,
+            Internação: 0,
+            Pronto_Socorro: 361.41,
+            Terapia: 157.89
         }
     }
 }
 
 const planosPorOperadora = {
-    Omint: ["CS1", "C16", "C19"],
-    Amil: ["Amil_Fácil_110", "Amil_Fácil_S60_e_S80", "Amil_One_S2500", "Amil_One_S6500_R1", "Amil_S380", "Amil_S450_e_S580", "Amil_S750"],
-    Bradesco: ["FCEX_E_e_FCQX_A_", "TNI1_E_e_TNI2_A_", "TNME_E_e_TNMQ_A_", "TNNI_E_TNMI_A_TNMM_A_e_TNMN_A_", "TNP4_A_TNP6_A_e_TNP8_A_", "TNWE_E_e_TNWQ_A_"],
-    Porto: ["LINHA_PORTO_SAUDE_P200", "LINHA_PORTO_SAUDE_P300", "LINHA_PORTO_SAUDE_P400", "LINHA_PORTO_SAUDE_P450", "LINHA_PORTO_SAUDE_P500", "LINHA_TRADICIONAL_Bronze", "LINHA_TRADICIONAL_Prata", "LINHA_TRADICIONAL_Ouro_Mais", "LINHA_TRADICIONAL_Ouro_Max", "LINHA_TRADICIONAL_Diamante_R1", "LINHA_TRADICIONAL_Diamante_R2", "LINHA_PRO_Bronze_Pro", "LINHA_PRO_Diamente_Pro", "LINHA_PRO_Ouro_Pro", "LINHA_PRO_Prata_Pro",],
+    Omint: ["Skil", "Corporate", "Premium"],
+    Amil: ["Bronze_e_Bronze_Mais", "Prata_e_Ouro", "Platinum_e_Platinum_Mais", "Black", "S80", "S380", "S450", "S750", "S2500"],
+    Bradesco: ["Saude_Plus", "Efetivo", "Nacional_Flex", "Ideal", "Nacional", "Nacional_Plus"],
+    Porto: ["Prata_Pro", "Ouro_Pro", "Diamante_Pro", "Bronze", "Prata", "Ouro_Mais", "Ouro_Max", "Diamante_Mais_R1", "P210", "P310", "P410", "P460", "P510"],
     Unimed: ["COMPACTO", "COMPLETO", "EFETIVO", "SÊNIOR", "SUPERIOR", "SUPERIOR_PLUS"],
-    Sulamerica: ["Clássico", "Direto", "Especial", "Exato", "Executivo", "Prestigie"]
+    Sulamerica: ["Clássico", "Direto", "Especial", "Executivo", "Prestigie"]
 }
 
 const porcentagens = {
-    LINHA_PORTO_SAUDE_P200: ["20_por_cento", "30_por_cento"],
-    LINHA_PORTO_SAUDE_P300: ["20_por_cento", "30_por_cento"],
-    LINHA_PORTO_SAUDE_P400: ["20_por_cento", "30_por_cento"],
-    LINHA_PORTO_SAUDE_P450: ["20_por_cento", "30_por_cento"],
-    LINHA_PORTO_SAUDE_P500: ["20_por_cento", "30_por_cento"],
-    LINHA_TRADICIONAL_Bronze: ["20_por_cento", "30_por_cento"],
-    LINHA_TRADICIONAL_Prata: ["20_por_cento", "30_por_cento"],
-    LINHA_TRADICIONAL_Ouro_Mais: ["20_por_cento", "30_por_cento"],
-    LINHA_TRADICIONAL_Ouro_Max: ["20_por_cento", "30_por_cento"],
-    LINHA_TRADICIONAL_Diamante_R1: ["20_por_cento", "30_por_cento"],
-    LINHA_TRADICIONAL_Diamante_R2: ["20_por_cento", "30_por_cento"],
-    LINHA_PRO_Bronze_Pro: ["10_por_cento", "20_por_cento", "30_por_cento"],
-    LINHA_PRO_Diamente_Pro: ["10_por_cento", "20_por_cento", "30_por_cento"],
-    LINHA_PRO_Ouro_Pro: ["10_por_cento", "20_por_cento", "30_por_cento"],
-    LINHA_PRO_Prata_Pro: ["10_por_cento", "20_por_cento"]
+    Prata_Pro: ["10_por_cento", "20_por_cento", "30_por_cento"],
+    Ouro_Pro: ["10_por_cento", "20_por_cento", "30_por_cento"],
+    Diamante_Pro: ["10_por_cento", "20_por_cento", "30_por_cento"],
+    Bronze: ["20_por_cento", "30_por_cento"],
+    Prata: ["20_por_cento", "30_por_cento"],
+    Ouro_Mais: ["20_por_cento", "30_por_cento"],
+    Ouro_Max: ["20_por_cento", "30_por_cento"],
+    Diamante_Mais_R1: ["20_por_cento", "30_por_cento"],
+    P210: ["20_por_cento", "30_por_cento"],
+    P310: ["20_por_cento", "30_por_cento"],
+    P410: ["20_por_cento", "30_por_cento"],
+    P460: ["10_por_cento", "20_por_cento", "30_por_cento"],
+    P510: ["10_por_cento", "20_por_cento", "30_por_cento"],
+    Skil: ["20_por_cento", "30_por_cento"],
+    Corporate: ["20_por_cento", "30_por_cento"],
+    Premium: ["20_por_cento", "30_por_cento"],
 }
 
 function mostrarPlanos() {
@@ -598,7 +599,7 @@ function mostrarPlanos() {
         planoElement.value = plano;
         planoElement.id = plano;
         planoElement.onchange = mostrarPorcentagem;
-        plano = plano.replace(/_/g, " ").replace(" por cento", "%")
+        plano = plano.replace(/_/g, " ").replace(" por cento", "%").replace(/espc/g, "/")
         const label = document.createElement("label");
         label.htmlFor = plano;
         label.className = "checkboxLabel"
@@ -882,14 +883,61 @@ function EnviarDados() {
 
             TotalGasto = parseFloat(valorPagoConsulta) + parseFloat(valorPagoExamesEspeciais) + parseFloat(valorPagoExamesSimples) + parseFloat(valorPagoInternacao) + parseFloat(valorPagoProntoSocorro) + parseFloat(valorPagoTerapias);
 
-            document.getElementById('tabelas' + contar_porcentagem).innerHTML = `
+            let atingiuLimitador = false
+
+            if (resultado.operadora.replace(/_/g, " ") == "Seguros Unimed"){
+
+                if(checkedValues[x].replace(/_/g, " ").replace(" por cento", "%").replace(/b/g, "/") == "COMPACTO"){
+                    if (TotalGasto > 350.00) {
+                        TotalGasto = 350.00
+                        atingiuLimitador = true
+                    }
+                }
+                if(checkedValues[x].replace(/_/g, " ").replace(" por cento", "%").replace(/b/g, "/") == "COMPLETO"){
+                    if (TotalGasto > 400.00) {
+                        TotalGasto = 400.00
+                        atingiuLimitador = true
+                    }
+                }
+                if(checkedValues[x].replace(/_/g, " ").replace(" por cento", "%").replace(/b/g, "/") == "EFETIVO"){
+                    if (TotalGasto > 350.00) {
+                        TotalGasto = 350.00
+                        atingiuLimitador = true
+                    }
+                }
+                if(checkedValues[x].replace(/_/g, " ").replace(" por cento", "%").replace(/b/g, "/") == "SÊNIOR"){
+                    if (TotalGasto > 680.00) {
+                        TotalGasto = 680.00
+                        atingiuLimitador = true
+                    }
+                }
+                if(checkedValues[x].replace(/_/g, " ").replace(" por cento", "%").replace(/b/g, "/") == "SUPERIOR"){
+                    if (TotalGasto > 450.00) {
+                        TotalGasto = 450.00
+                        atingiuLimitador = true
+                    }
+                }
+                if(checkedValues[x].replace(/_/g, " ").replace(" por cento", "%").replace(/b/g, "/") == "SUPERIOR PLUS"){
+                    if (TotalGasto > 530.00) {
+                        TotalGasto = 530.00
+                        atingiuLimitador = true
+                    }
+                }
+            }
+
+            let HTML = `
                     <table class="TabelaValores--Operadora">
                             <div class="cabecalho-tabela">
                                 <div class="cabecalho-tabela-texto">
                                     <h1 class="Titulo__tabela-Operadora">${resultado.operadora.replace(/_/g, " ")}</h1>
-                                    <h2 class="Titulo__tabela-Plano">${checkedValues[x].replace(/_/g, " ").replace(" por cento", "%")}</h2>
+                                    <h2 class="Titulo__tabela-Plano">${checkedValues[x].replace(/_/g, " ").replace(" por cento", "%").replace(/espc/g, "/")}</h2>
                                 </div>
-                                <h1 class="valorTotalGasto">Total Gasto: R$ ${TotalGasto.toFixed(2).replace(".", ",")}</h1>
+                                <div id="limitadorMensal">
+                                    ${atingiuLimitador == true? 
+                                    '<h1 class="valorTotalGasto" style="color: red; text-align: right; display: block;" id="limitador">Limitador Mensal</h1>' 
+                                    : ''}
+                                    <h1 class="valorTotalGasto">Total Gasto: R$ ${TotalGasto.toFixed(2).replace(".", ",")}</h1>
+                                </div>
                             </div>
                             <tr class="
                             ">
@@ -962,6 +1010,12 @@ function EnviarDados() {
             contar_porcentagem = contar_porcentagem + 1
             tabelasAnteriores = checkedValues
             porcentagemAnteriores = checkedValuesPlanos
+
+            console.log(resultado.operadora.replace(/_/g, " "))
+
+            //Ta gerando na hora errada
+
+            document.getElementById('tabelas' + contar_porcentagem).innerHTML = HTML
     }
 }
 
